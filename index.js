@@ -149,7 +149,7 @@ exports.handler = async (event, context) => {
     // Determine the DynamoDB table name, start date, and projection expression
     const tableName = getTableName(page);
     const startDate = getStartDate(days);
-    const projectionExpression = "#datatimestamp, reportTime, desktop, mobile ";
+    const projectionExpression = "#datatimestamp, urls, ISTime, desktop, mobile ";
 
     // Set up DynamoDB scan parameters
     const params = {
